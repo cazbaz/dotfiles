@@ -66,11 +66,14 @@ return require('packer').startup(function(use)
 
   -- Keymap help window
   use { "folke/which-key.nvim",
-	config = function()
-		vim.o.timeout = true
-		vim.o.timeoutlen = 300
-  end
-}
+	  config = function()
+		  vim.o.timeout = true
+		  vim.o.timeoutlen = 300
+	  end
+  }
+
+  -- Surrounds text in quotes, parens, etc.
+  use 'tpope/vim-surround'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

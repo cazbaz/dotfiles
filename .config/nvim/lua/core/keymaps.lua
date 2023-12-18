@@ -12,6 +12,9 @@ vim.keymap.set('n', '<C-l>', '<C-w>l') -- Shift focus to right split
 vim.keymap.set('n', '<leader>ft', '<C-o>:Ex<cr>') -- Open netrw
 vim.keymap.set('n', '<leader>j', '<C-f>') -- Page down
 vim.keymap.set('n', '<leader>k', '<C-b>') -- Page up
+vim.keymap.set('n', 'H', '^') -- Easier left horizontal nav
+vim.keymap.set('n', 'L', '$') -- Easier right horizontal nav
+
 
 -- Telescope
 local builtin = require('telescope.builtin')
