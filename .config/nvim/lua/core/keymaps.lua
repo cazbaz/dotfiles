@@ -14,7 +14,11 @@ vim.keymap.set('n', '<leader>j', '<C-f>') -- Page down
 vim.keymap.set('n', '<leader>k', '<C-b>') -- Page up
 vim.keymap.set('n', 'H', '^') -- Easier left horizontal nav
 vim.keymap.set('n', 'L', '$') -- Easier right horizontal nav
-
+vim.keymap.set('i', '"', '""<left>') -- auto close quotes
+vim.keymap.set('i', "'", "''<left>") -- auto close single quotes
+vim.keymap.set('i', '(', '()<left>') -- auto close parens
+vim.keymap.set('i', '{', '{}<left>') -- auto close curly brace
+vim.keymap.set('i', '[', '[]<left>') -- auto close square brace
 
 -- Telescope
 local builtin = require('telescope.builtin')
