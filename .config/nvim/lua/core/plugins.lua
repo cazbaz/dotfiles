@@ -15,17 +15,17 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   -- My plugins here
-  
+
   -- Plugin manager
   use 'wbthomason/packer.nvim'
-  
+
   -- Theme
   use 'nyoom-engineering/oxocarbon.nvim'
   use 'RRethy/nvim-base16'
 
   -- Icons
   use 'nvim-tree/nvim-web-devicons'
-  
+
   -- Bottom line
   use {
 	  'nvim-lualine/lualine.nvim',
@@ -46,7 +46,7 @@ return require('packer').startup(function(use)
 	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
+
   -- Git diff view
   use "sindrets/diffview.nvim"
 
@@ -74,6 +74,10 @@ return require('packer').startup(function(use)
 
   -- Surrounds text in quotes, parens, etc.
   use 'tpope/vim-surround'
+
+  -- Snippets
+  use 'SirVer/ultisnips'
+  use 'honza/vim-snippets'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

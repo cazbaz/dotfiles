@@ -2,7 +2,7 @@ require("core.keymaps")
 require("core.plugins")
 require("core.plugin_config")
 
-vim.opt.number = true 
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 4
@@ -11,6 +11,7 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 4
 vim.opt.mouse = a
 vim.opt.clipboard = unnamedplus
+vim.opt.scrolloff = 999
 
 -- Theme configuration
 vim.o.termguicolors = true

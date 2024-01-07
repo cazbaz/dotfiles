@@ -26,3 +26,8 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- Telescope find file
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) -- Telescope live grep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- Telescope buffers
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {}) -- Telescope help tags
+
+-- LSP
+vim.keymap.set('n', '<leader>fr', vim.lsp.buf.references)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
