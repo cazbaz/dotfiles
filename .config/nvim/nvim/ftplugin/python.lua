@@ -7,4 +7,3 @@ local lspconfig = require("lspconfig")
 
 lspconfig.pylsp.setup { capabilities = capabilities }
 
-print("ftplugin/python.lua loaded")
