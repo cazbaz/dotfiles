@@ -13,6 +13,8 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+print("lua/core/plugins.lua loaded")
+
 return require('packer').startup(function(use)
   -- My plugins here
 
