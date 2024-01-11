@@ -67,8 +67,39 @@ install-node() {
 	fi
 }
 
+create-projects-dir() {
+	PROJECTS_FILE="$HOME/Projects"
+
+	if [ -e "$PROJECTS_FILE" ]; then
+		echo "Projects file already exists."
+	else
+		echo "Creating Projects file..."
+		touch "$PROJECTS_FILE"
+		echo "Projects file created at $projects_file."
+	fi
+}
+
+clone-dotfiles() {
+	repo_url="git@github.com:cazbaz/dotfiles.git"  # Replace with the actual repository URL
+	destination_dir="$HOME/Projects/public/dotfiles"                # Replace with the desired destination directory
+
+	if [ -d "$destination_dir" ]; then
+		echo "Destination directory already exists: $destination_dir."
+	else
+		echo "Cloning repository to $destination_dir..."
+		git clone "$repo_url" "$destination_dir"
+		echo "Clone complete."
+	fi
+}
+
+create-dirs() {
+	create-projects-dir
+	clone-dotfiles
+}
+
 echo "Installing dependencies..."
 install-homebrew # if on mac
 install-ripgrep
 install-node
 
+create-dirs
