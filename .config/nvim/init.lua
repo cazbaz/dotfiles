@@ -27,4 +27,3 @@ vim.cmd.highlight 'TelescopePromptPrefix guibg=#1a1c1d'
 vim.cmd.highlight 'TelescopePromptBorder guibg=#1a1c1d'
 vim.cmd.highlight 'TelescopeResultsTitle guifg=#ffffff'
 
-print('init.lua loaded')

@@ -6,6 +6,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
 lspconfig.rust_analyzer.setup{
+	capabilities = capabilities,
 	settings = {
 		['rust-analyzer'] = {
 			diagnostics = {
@@ -13,9 +14,5 @@ lspconfig.rust_analyzer.setup{
 			}
 		}
 	}
-}
-
-lspconfig.rust_analyzer.setup {
-	capabilities = capabilities
 }
 
