@@ -79,22 +79,8 @@ create-projects-dir() {
 	fi
 }
 
-clone-dotfiles() {
-	repo_url="git@github.com:cazbaz/dotfiles.git"  # Replace with the actual repository URL
-	destination_dir="$HOME/Projects/public/dotfiles"                # Replace with the desired destination directory
-
-	if [ -d "$destination_dir" ]; then
-		echo "Destination directory already exists: $destination_dir."
-	else
-		echo "Cloning repository to $destination_dir..."
-		git clone "$repo_url" "$destination_dir"
-		echo "Clone complete."
-	fi
-}
-
 create-dirs() {
 	create-projects-dir
-	clone-dotfiles
 }
 
 echo "Installing dependencies..."
